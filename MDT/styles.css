@@ -1,0 +1,200 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Set the text color to white */
+}
+
+.navbar-buttons button {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.navbar-buttons a {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.navbar-buttons a:hover {
+    background-color: #0056b3;
+}
+/* Dark mode toggle button */
+.navbar-toggle-dark-mode {
+    border-radius: 5px;
+}
+/* Update navbar buttons to be blue */
+.navbar-buttons button {
+    border: none;
+    background-color: transparent;
+    color: #007bff; /* Change the color to blue */
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.blue-button {
+    background-color: #007bff;
+    color: #fff;
+}
+/* Update navbar button hover effect */
+.navbar-buttons button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+/* Sidebar styles */
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar button.a {
+    text-decoration: none; /* Remove underline */
+}
+
+button a {
+    color: inherit; /* Inherit text color from parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+.sidebar button:hover {
+    background-color: #555;
+}
+
+/* Popup styles */
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 20px;
+    max-width: 400px;
+    width: 80%;
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .navbar, .dark-mode .sidebar button {
+    background-color: #444;
+}
+
+.dark-mode .sidebar {
+    background-color: #444;
+}
+
+.dark-mode .popup {
+    background-color: #222;
+    color: #fff;
+}
+/* Adjustments to prevent overlapping */
+
+/* Add padding to the main content area to make space for the sidebar */
+main {
+    padding-left: 220px; /* Adjust this value based on the width of your sidebar */
+}
+
+/* Ensure the sidebar appears above the main content area */
+.sidebar {
+    z-index: 100;
+}
+
+/* Ensure the main content area appears above the sidebar */
+main {
+    position: relative;
+    z-index: 200;
+}
+
+/* Position the sidebar and main content area side by side */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    main {
+        padding-left: 0;
+    }
+}
+
+/* Ensure the navbar appears above everything */
+.navbar {
+    position: relative;
+    z-index: 300;
+}
+
+.officer-info {
+    margin-right: auto; /* This will push the officer info to the left */
+    color: #fff; /* Optional: Set the text color */
+    /* Additional styling as needed */
+}

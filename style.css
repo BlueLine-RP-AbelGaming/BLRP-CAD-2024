@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar-buttons {
+    display: flex;
+}
+.navbar-buttons a {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.navbar-buttons a:hover {
+    background-color: #0056b3;
+}
+.navbar-toggle-dark-mode {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.navbar-toggle-dark-mode:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+.dark-mode .container {
+    background-color: #333;
+}
+.dark-mode .navbar {
+    background-color: #000;
+}
+.dark-mode .button {
+    background-color: #007bff;
+    color: #fff;
+}
+/* New styles for login and register links */
+.link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.link-button:hover {
+    background-color: #0056b3;
+}
+/* Style for the video background */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Container for content */
+.content-container {
+    position: relative;
+    z-index: 1; /* Ensure content is above video */
+}
+/* Import the font */
+@font-face {
+    font-family: 'PoliceFont';
+    src: url('assets/ChicagoPoliceFont.otf') format('truetype');
+    /* Add additional font file formats (e.g., woff, woff2) as needed */
+}
+h1 {
+    font-family: 'PoliceFont', Arial, sans-serif;
+    /* Use fallback fonts in case the custom font fails to load */
+}
+a {
+    text-decoration: none; /* Removes underline decoration */
+}
+.container a {
+    text-decoration: none; /* Removes underline decoration */
+}
